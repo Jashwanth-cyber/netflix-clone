@@ -39,7 +39,7 @@ const App = () => {
           }
         />
         <Route
-          path="/movies/:id"
+          path="/movies/:movieId"
           element={
             <ProtectedRoute>
               <MovieDetails />
