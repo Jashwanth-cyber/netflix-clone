@@ -65,7 +65,7 @@ const MovieDetails = () => {
       <div
         className="relative w-full h-[400px] flex items-end"
         style={{
-          backgroundImage: `url(${imageBaseUrl}${movie.backdrop_path})`,
+          backgroundImage: `url(${movie.backdrop_path})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -75,7 +75,7 @@ const MovieDetails = () => {
           <h1 className="text-4xl font-bold mb-2">{movie.title}</h1>
           <div className="flex items-center gap-4 mb-2">
             <span>{movie.runtime}</span>
-            <span className="border px-2 py-1 rounded">{movie.certificate}</span>
+            <span className="border px-2 py-1  text-white">{movie.certificate}</span>
             <span>{movie.release_date?.split("-")[0]}</span>
           </div>
           <p className="max-w-2xl mb-4">{movie.overview}</p>
@@ -114,9 +114,9 @@ const MovieDetails = () => {
           {similarMovies.map((sim) => (
             <div key={sim.id} className="rounded-lg overflow-hidden shadow">
               <img
-                src={sim.poster_path ? `${imageBaseUrl}${sim.poster_path}` : "https://via.placeholder.com/300x450?text=No+Image"}
+                src={sim.poster_path ? `${sim.poster_path}` : "https://via.placeholder.com/300x450?text=No+Image"}
                 alt={sim.title}
-                className="w-full h-48 object-cover"
+                className="w-full h-42 object-cover"
               />
             </div>
           ))}

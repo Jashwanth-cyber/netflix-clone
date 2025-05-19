@@ -16,7 +16,7 @@ const Login = () => {
     const userDetails = { username, password };
 
     try {
-      const response = await fetch('https://apis.ccbp.in/login', {
+      const response = await fetch('/api/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
