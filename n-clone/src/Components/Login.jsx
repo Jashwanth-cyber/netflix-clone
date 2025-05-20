@@ -25,7 +25,7 @@ const Login = () => {
       });
 
       const data = await response.json();
-      if (data.status_code !== 400) {
+      if (data.ok) {
         Cookies.set('jwt_token', data.jwt_token);
         localStorage.setItem('username', username); // Save username in local storage
         navigate('/home'); 
